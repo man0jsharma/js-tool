@@ -2,7 +2,7 @@ const promise = new Promise(
     (resolve, reject) => {
         setTimeout(
             () => {
-                console.log('Timer Timed out')
+                // console.log('Timer Timed out')
                 reject('Promise Done');
             },
             2000)
