@@ -38,7 +38,7 @@ const arrayCopy = [...array]
 
 console.log(arrayCopy);
 
-/
+
 arrayCopy.map(item => console.log(item + 10));
 
 
