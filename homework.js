@@ -1,68 +1,104 @@
-// Build a calculator
-
-// Add
-// Sub
-// mul
-// Div
-
-// Callback
-
-/// Calculator(a, b, callbackfunc)
-// should not call add directly
+// var object = {}
 
 
-/// Promise function
-// Bring calculator to prmoise
-// add setTimeOut in each function 1 mins
+// var object1 = new Object();
 
-//hello
+// object = {
+//     chennai: {
+//         2017: 89,
+//         2018: 90
+//     },
+//     bangalore: {
+//         2017: 86,
+//         2018: 85
+//     },
+//     cochin: {
+//         2017: 86,
+//         2018: 85
+//     }
+// }
 
-var add = function(a, b){
-return a+b;
-};
+// object = {
+//     hyderabad: {
+//         2017: 90,
+//         2018: 99
+//     },
+//     ...object
+// }
 
-var sub = function(a, b){
-    return a-b;
-    };
 
-var multiply = function(a,b) {
-return a*b;
-};
 
-var div = function(a, b){
-    return a/b;
-    };
+// var array = [{
+//     cityName: 'chennai',
+//     2017: 89,
+//     2018: 90
+// }, {
+//     cityName: 'Bangalore',
+//     2017: 86,
+//     2018: 85
+// },
+// {
+//     cityName: 'cochin',
+//     2017: 86,
+//     2018: 85
+// }]
 
-var calc = function(x,y, callback){
-    return callback(x,y);
-};
 
-var addition =  calc(10,20, add);
-var substraction =  calc(10,20, sub);
-var multiplication =  calc(10,20, multiply);
-var division =  calc(10,20, div);
+// array = [...array,  {
+//     cityName: 'Hyd',
+//     2017: 90,
+//     2018: 99
+// }]
 
-console.log('add is: ' +addition);
-console.log('sub is: ' +substraction);
-console.log('multiply is: ' +multiplication);
-console.log('div is: ' +division); 
+// array.push({
+//     cityName: 'mumbai',
+//     2017: 90,
+//     2018: 99
+// })
 
-const promise = new Promise(
-    (resolve, reject) =>{
-        setTimeout(()=>{
-           if(addition>0)
-           {
-               resolve('promise done');
-           }
-           else{
-               reject('promise failed');
-           }
-           
-        } 
-        , 1000)
+// // console.log(array.filter(item => item.cityName.includes('c')));
 
+
+
+// // Destructing
+
+// // console.log(array);
+
+// const [chennai, bangalore, ...cochin] = array;
+
+// console.log(chennai);
+// console.log(bangalore);
+// console.log(cochin);
+
+
+class Vehicle {
+    constructor() {
+        this.vehicleName = '';
     }
-)
-promise.then(value=>{console.log('success :'+value)});
-promise.catch(err=>{console.log('error :'+err)});
 
+    getVehicle() {
+        return this.vehicleName
+    }
+
+    setVehicle(val) {
+        this.vehicleName = val;
+    }
+
+    printVehicle() {
+        console.log(this);
+    }
+}
+
+var vehicleObj = new Vehicle();
+vehicleObj.setVehicle('Tesla')
+vehicleObj.printVehicle();
+
+
+/*
+1. 
+Node { left.value : 10, right.value : 20 }
+
+2.
+Node { left.left.value: 5, left.right.value : 10, right.left.value: 15, right.right.value : 20}
+
+*/
