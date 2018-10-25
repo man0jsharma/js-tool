@@ -58,7 +58,6 @@ const promise = new Promise(
             }
         }
             , 1000)
-
     }
 )
 
