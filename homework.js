@@ -50,7 +50,7 @@ console.log('div is: ' +division);
 const promise = new Promise(
     (resolve, reject) =>{
         setTimeout(()=>{
-           if(addition>0)
+           if(substraction>0)
            {
                resolve('promise done');
            }
@@ -63,6 +63,8 @@ const promise = new Promise(
 
     }
 )
-promise.then(value=>{console.log('success :'+value)});
-promise.catch(err=>{console.log('error :'+err)});
+promise
+       .then(value=>{console.log('success :'+value)})
+       .catch(err=>{console.log('error :'+err)})
 
+      
