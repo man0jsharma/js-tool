@@ -60,7 +60,19 @@
 
 
 
-// // Destructing
+const promise = new Promise(
+    (resolve, reject) =>{
+        setTimeout(()=>{
+           if(substraction>0)
+           {
+               resolve('promise done');
+           }
+           else{
+               reject('promise failed');
+           }
+           
+        } 
+        , 1000)
 
 // // console.log(array);
 
@@ -102,3 +114,7 @@ Node { left.value : 10, right.value : 20 }
 Node { left.left.value: 5, left.right.value : 10, right.left.value: 15, right.right.value : 20}
 
 */
+// // )
+// promise
+//        .then(value=>{console.log('success :'+value)})
+//        .catch(err=>{console.log('error :'+err)})
