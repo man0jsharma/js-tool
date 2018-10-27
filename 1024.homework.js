@@ -46,6 +46,7 @@ console.log(sortByCost[0]);
 //Create a method to find the books wrote by 'Miller'
 
 const millerBooks = library.books.filter(book => book.author === 'Miller');
+
 console.log(millerBooks);
 
 //Create a method to fetch the library address + Owner name in this format 
