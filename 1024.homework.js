@@ -38,11 +38,25 @@ const library = {
 
 
 //Create a method find the cheapest book
+const sortByCost = library.books.sort(
+    (firstBook, secondBook) =>
+        firstBook.price - secondBook.price);
 
+console.log(sortByCost[0]);
 //Create a method to find the books wrote by 'Miller'
+
+const millerBooks = library.books.filter(book => book.author === 'Miller');
+console.log(millerBooks);
 
 //Create a method to fetch the library address + Owner name in this format 
 // {
 //     libraryAddress: 'xxx',
 //     owner : 'xxxxx'
 // }
+
+ const libraryObj = {
+     libraryAddress : library.address,
+     owner : library.owner
+ }
+
+ console.log(libraryObj);
