@@ -54,7 +54,10 @@ const makeCoffee = () => {
             buySugar()
         ]
     ).then(
-        () => console.log('Coffee made')
+        function() {
+            console.log('coffee made')
+        }
+        
     ).catch(
         () => console.log('No Coffee')
     )

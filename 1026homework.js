@@ -46,9 +46,7 @@
 //var id =[];
 
 const buybrick = () => {
-    
     return new Promise((resolve, reject) => {
-      //  id[1] =2;
         if (true) {
             setTimeout(() => {
                 resolve();
@@ -59,15 +57,12 @@ const buybrick = () => {
                 reject()
             }, 2000)
         }
-    }).catch(() => {
-                console.log('house is under construction');
-             })
+    })
 }
+
 const buycement = () => {
     
     return new Promise((resolve, reject) => {
-        
-       // id[0] =1;
         if (true) {
             setTimeout(() => {
                 resolve();
@@ -84,8 +79,6 @@ const buycement = () => {
 const preparedoor = () => {
     
     return new Promise((resolve, reject) => {
-        
-       // id[3] =4;
         if (true) {
             setTimeout(() => {
                 resolve();
@@ -101,8 +94,6 @@ const preparedoor = () => {
 
 const buywood = ()  => {
     return new Promise((resolve, reject) => {
-       // id[2] =3;
-      
         if (true) {
             setTimeout(() => {
                 console.log("buying wood");
@@ -118,27 +109,10 @@ const buywood = ()  => {
 }
 
 
-const buildhome = ()  => {
-    Promise.all(buybrick,buycement,buywood,preparedoor).then(console.log("Your Sweet Home is ready :)")).catch(() => {
-           console.log('house is under construction');
-           });
-   // var sorted =id.sort();
-    
-    // if(sorted)
-    // {
-    //     buybrick().then(()=>{
-    //         buycement().then(()=>{
-    //             buywood().then(()=>{
-    //                 preparedoor().then(()=>{
-    //                     console.log('House built');
-    //                 })
-    //             })
-    //         })
-    //     }).catch(() => {
-    //         console.log('house is under construction');
-    //     })
-    // }
-    
+const buildhome = () => {
+    Promise.all([buybrick(),buycement(),buywood(),preparedoor()])
+    .then(() => console.log("Your Sweet Home is ready :)"))
+    .catch((e) => console.log(e + ' house is under construction'));
 }
 
 
