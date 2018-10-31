@@ -43,30 +43,35 @@
 // // //     }
 // // // }
 
-var id =[];
+//var id =[];
 
 const buybrick = () => {
     
     return new Promise((resolve, reject) => {
-        id[1] =2;
+      //  id[1] =2;
         if (true) {
             setTimeout(() => {
                 resolve();
+                console.log("buying Bricks");
             }, 2000)
         } else {
             setTimeout(() => {
                 reject()
             }, 2000)
         }
-    })
+    }).catch(() => {
+                console.log('house is under construction');
+             })
 }
 const buycement = () => {
     
     return new Promise((resolve, reject) => {
-        id[0] =1;
+        
+       // id[0] =1;
         if (true) {
             setTimeout(() => {
                 resolve();
+                console.log("buying Cement");
             }, 2000)
         } else {
             setTimeout(() => {
@@ -79,10 +84,12 @@ const buycement = () => {
 const preparedoor = () => {
     
     return new Promise((resolve, reject) => {
-        id[3] =4;
+        
+       // id[3] =4;
         if (true) {
             setTimeout(() => {
                 resolve();
+                console.log("Preparing door");
             }, 2000)
         } else {
             setTimeout(() => {
@@ -94,10 +101,13 @@ const preparedoor = () => {
 
 const buywood = ()  => {
     return new Promise((resolve, reject) => {
-        id[2] =3;
+       // id[2] =3;
+      
         if (true) {
             setTimeout(() => {
+                console.log("buying wood");
                 resolve();
+               
             }, 2000)
         } else {
             setTimeout(() => {
@@ -109,22 +119,25 @@ const buywood = ()  => {
 
 
 const buildhome = ()  => {
-    var sorted =id.sort();
+    Promise.all(buybrick,buycement,buywood,preparedoor).then(console.log("Your Sweet Home is ready :)")).catch(() => {
+           console.log('house is under construction');
+           });
+   // var sorted =id.sort();
     
-    if(sorted)
-    {
-        buybrick().then(()=>{
-            buycement().then(()=>{
-                buywood().then(()=>{
-                    preparedoor().then(()=>{
-                        console.log('House built');
-                    })
-                })
-            })
-        }).catch(() => {
-            console.log('house is under construction');
-        })
-    }
+    // if(sorted)
+    // {
+    //     buybrick().then(()=>{
+    //         buycement().then(()=>{
+    //             buywood().then(()=>{
+    //                 preparedoor().then(()=>{
+    //                     console.log('House built');
+    //                 })
+    //             })
+    //         })
+    //     }).catch(() => {
+    //         console.log('house is under construction');
+    //     })
+    // }
     
 }
 
